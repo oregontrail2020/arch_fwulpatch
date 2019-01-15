@@ -18,7 +18,7 @@ echo 20
 wget http://leech.binbash.it:8008/FWUL/.repo/fwulpatch.pkg.tar.xz -O /tmp/fwulpatch.pkg.tar.xz 
 
 echo 50
-pacman -U --noconfirm fwulpatch.pkg.tar.xz
+pacman -U --noconfirm /tmp/fwulpatch.pkg.tar.xz 2>&1 >> $LOG && rm -vf /tmp/fwulpatch.pkg.tar.xz 2>&1 >> $LOG
 
 echo 60
 
